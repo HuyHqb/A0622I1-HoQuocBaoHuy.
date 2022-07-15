@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chuyển đổi tiền tệ</h1>
+        <label>Amount</label> 
+        <label style="margin-left: 18%">From currency</label>
+        <label style="margin-left: 17.5%">To currency</label><br>
+        <input type="text" name="giaTri" id="giaTri"> 
+        <select name="fCurrency" id="fCurrency" style="margin-left: 10%;"">
+            <option value="VND" id="vnd">VND </option>
+            <option value="USD" id="usd">USD</option>
+        </select>
+        <select name="tCurrency" id="tCurrency" style="margin-left: 20% ;">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+        <button style="margin-left: 10%" type="button" name="convert" id="convert" value="convert" onclick="changeMoney();">convert</button> <br>
+        <p id="result">Result :</p>     
+    </Form>
+    <script src="change_money.js">
+    </script>
+</body>
+
+</html>
