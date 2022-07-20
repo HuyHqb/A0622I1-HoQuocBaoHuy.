@@ -59,30 +59,8 @@
         <button type="button" onclick="calculator('/')" >Divsion (/)</button>
         <p id="result">Result :</p>  
     </form>
-    <SCript>
-        function calculator( operator){
-      var a = Number( document.getElementById("a").value);
-      var b = Number( document.getElementById("b").value);
-      var kq = 0;
-      switch(operator){
-        case '+': kq = a+b;
-        document.getElementById('result').innerHTML = 'Result : ' + kq;
-        break;
-        case '-': kq = a-b;
-        document.getElementById('result').innerHTML = 'Result : ' + kq;
-        break;
-        case '*': kq = a*b;
-        document.getElementById('result').innerHTML = 'Result : ' + kq;
-        break;
-        case '/': kq =parseFloat(a/b);
-        if(b==0){
-            alert('b phải khác 0');
-        }else{
-        document.getElementById('result').innerHTML = 'Result : ' + kq;
-        }
-        break;
-      }
-    }
+    <SCript src="may_tinh.js">
+        
     </SCript>
 
 </body>

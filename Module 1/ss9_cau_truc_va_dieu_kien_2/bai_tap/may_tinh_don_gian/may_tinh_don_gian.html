@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;
+            margin: 5px;
+            font-size:30px;
+            padding: 10px;
+        }
+        input{
+            size: 10%;
+            padding: 10px;
+            padding-right: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Máy tính đơn giản</h1>
+    <form action="" >
+    <input type="text" disabled name="screen" id="screen"><br>
+    <button type="button" onclick="addNumber('1')" >1</button>
+    <button type="button" onclick="addNumber('2')" >2</button>
+    <button type="button" onclick="addNumber('3')" >3</button>
+    <button type="button" onclick="addOperator('+')" >+</button><br>
+    <button type="button" onclick="addNumber('4')" >4</button>
+    <button type="button" onclick="addNumber('5')" >5</button>
+    <button type="button" onclick="addNumber('6')" >6</button>
+    <button type="button" onclick="addOperator('-')" >-</button><br>
+    <button type="button" onclick="addNumber('7')" >7</button>
+    <button type="button" onclick="addNumber('8')" >8</button>
+    <button type="button" onclick="addNumber('9')" >9</button>
+    <button type="button" onclick="addOperator('*')" >x</button><br>
+    <button type="button" onclick="clearScreen()">C</button>
+    <button type="button" onclick="addNumber('0')" >0</button>
+    <button type="button" onclick="calc()" >=</button>
+    <button type="button" onclick="addOperator('/')" >/</button><br>
+</form>
+</body>
+<script src="may_tinh_don_gian.js"></script>
+</html>
