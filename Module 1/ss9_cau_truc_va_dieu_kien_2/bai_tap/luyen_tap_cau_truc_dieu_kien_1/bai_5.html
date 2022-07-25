@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+    let a = Number(prompt('Nhập điểm bài kiểm tra: '));
+    let b = Number(prompt('Nhập điểm bài kiểm tra giữa kì: '));
+    let c = Number(prompt('Nhập điểm bài kiểm tra cuối kì: '));
+    let result = parseFloat((a+(b*2)+(c*3))/6);
+    alert(result)
+   if (result<4){
+        alert ('Bạn đã ở lại lớp ,cần cố gắng hơn');
+        }else if(result<6.5){
+            alert('Bạn đạt học sinh trung bình');
+            }else if(result<8){
+                alert('Bạn đạt học sinh khá');
+                 }else {
+                    alert('Bạn đạt học sinh giỏi');
+                    }
+    
+</script>
+</html> 
+
+
