@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập số m<input type="text" id="met">
+    <input type="button" name="submit" onclick="changeM()" value="Đổi">
+    <input type="text" disabled id="output"> Feet
+</body>
+<script>
+    function changeM() {
+        var m = Number(document.getElementById('met').value);
+        var ft = parseFloat((m*3.2808));
+        var output = document.getElementById('output');
+        output.setAttribute("value", ft);
+    }
+</script>
+
+</html>
+
+
+<!-- Bài 2: Chuyển từ mét sang feet:
+
+ft =m * 3.2808 -->

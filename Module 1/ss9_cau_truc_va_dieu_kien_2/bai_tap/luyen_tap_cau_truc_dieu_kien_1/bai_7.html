@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var noiMang = Number(prompt('Nhập số phút gọi nội mạng: '));
+    var ngoaiMang = Number(prompt('Nhập số phút gọi ngọai mạng: '));
+    var cuocNoiMang = 200;
+    var cuocNgoaiMang = 500;
+    var pay = Number(noiMang*cuocNoiMang + ngoaiMang*cuocNgoaiMang);
+    alert('cước của bạn là '+ pay + ' đ')
+    if (pay < 100000){
+        alert('sài ít vậy');
+    } else {
+        alert('giàu thế');
+    }
+
+
+
+</script>
+
+</html>
