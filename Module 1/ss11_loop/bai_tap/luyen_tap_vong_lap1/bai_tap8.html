@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button type="button" onclick="guesGame();">chơi</button>
+</body>
+<script>
+    function guesGame() {
+        let min = +prompt("nhập Min")
+        let max = +prompt("nhập Max")
+        let randomNum = Math.floor(Math.random() * (max - min)) + min;
+        let guessNum = +prompt("Hãy đoán 1 con số trong khoảng bạn vừa nhập");
+
+        console.log(randomNum)
+
+        for(let i = 0; i < 3; i++){
+            if(guessNum < randomNum){
+                guessNum = +prompt("hãy đoán số lớn hơn số bạn vừa đoán");
+            }else if(guessNum>randomNum){
+                guessNum = +prompt("hãy đoán số nhỏ hơn số bạn vừa đoán");
+            }else {
+                alert("BINGO! Bạn đã đoán trúng");
+                return;
+            }
+        }
+    }
+</script>
+</html>
