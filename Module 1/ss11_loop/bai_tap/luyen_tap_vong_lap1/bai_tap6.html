@@ -7,4 +7,22 @@
 <body>
 
 </body>
+<script>
+    let n = 7;
+    let sum = 0;
+    let size = prompt("nhập số lượng số nguyên tố cần in: ")
+    
+    for(let i=0;i<size;i++){
+        if(n%7==0){
+            document.write(n+"<br>")
+            sum+=n;
+            n++;
+        }
+        else{
+            n++;
+        }
+    }
+    document.write('tổng là: '  + sum)
+    
+</script>
 </html>
