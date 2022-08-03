@@ -12,16 +12,21 @@
 
 </body>
 <script>
-    let a = prompt('nhập nhiệt độ');
-    while (a < 20 || a > 100) {
-        if (a < 20) { 
-            prompt('Nhiệt độ thấp vui lòng nhập lại')
-        }else if (a > 100) {
-            prompt('Nhiệt độ cao vui lòng nhập lại')
+
+    let celsius = Number(prompt("hãy nhập nhiệt độ hiện tại"));
+    while (celsius < 20 || celsius > 100) {
+        if (celsius < 20) {
+            alert("Nhiệt độ thấp, vui lòng tăng")
+            celsius = Number(prompt("Hãy nhập nhiệt độ' "));
         }
-        if (a>=20 && a<=100){
-            alert('Nhiệt độ hiện giờ là : ' + a + ' độ');
-        }}
+        if (celsius > 100) {
+            alert("Nhiệt độ cao, vui lòng giảm")
+            celsius = Number(prompt("Hãy nhập nhiệt độ"));
+        }
+    }
+    alert("nhiệt độ hiện tại là: " + celsius + " độ C")
+
+
 </script>
 
 </html>

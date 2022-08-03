@@ -10,12 +10,12 @@
     
 </body>
 <script>
-    let i=1;
-    for (i;i<100;i++){
-        document.write(i+ "<br>")
-        if(i==99){
-          alert('Hoàn thành!')
-        }
+     var n = prompt('Input your number: ')
+    let result = 1;
+    while (n > 1) {
+        result = result * n;
+        n -= 1;
     }
+    document.write("result: " + result)
 </script>
 </html>
