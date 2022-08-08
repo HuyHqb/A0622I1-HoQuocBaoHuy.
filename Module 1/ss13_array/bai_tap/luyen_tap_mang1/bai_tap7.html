@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let myArr = [20, 30, 40, 50, 60, 23, 45, 12, 16, 17, 27, 29];
+    let v = prompt('Nhập số V bạn muốn: ')
+    let flag = false;
+    for (let i = 0; i < myArr.length; i++) {
+        if (v == myArr[i]) {
+            flag = true;
+            myArr.splice(i, 1);
+            myArr.push(0);
+        }
+    }
+    if (flag == true) {
+        alert(v + ' in the array' + "\n" + myArr)
+    } else {
+        alert(v + ' is not in the array')
+    }
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let myArr = [20, 30, 40, 50, 60, 23, 45, 12, 16, 17, 27, 29];
+    let temp = myArr[0];
+    for (let i = 0; i < myArr.length-1; i++) {
+        for (let j=i + 1; j<myArr.length;j++)
+        if (myArr[i] < myArr[j]) {
+            temp = myArr[j]
+            myArr[j] = myArr[i]
+            myArr[i] = temp     
+        }
+    }
+    document.write(myArr)
+    
+
+
+
+</script>
+
+</html>

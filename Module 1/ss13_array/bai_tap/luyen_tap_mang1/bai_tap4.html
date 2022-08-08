@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="reverse();">Reverse array</button>
+    <div id="arrayElements"></div>
+    <div id="result"></div>
+</body>
+<script>
+    function reverse() {
+        var str = prompt("Nhập vào một chuỗi kí tự");
+        document.getElementById("arrayElements").innerHTML = str;
+        var n = str.length;
+        var arr = str.split("");
+        for (let i = 0; i < n / 2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+        }
+        document.getElementById("result").innerHTML = arr.join("");
+    }
+
+
+</script>
+
+</html>

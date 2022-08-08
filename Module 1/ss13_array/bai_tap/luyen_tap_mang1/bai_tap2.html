@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let myArr = [70, 42, 10, 11, 50, 36];
+    let max = myArr[0];
+
+    for (let i = 1; i < myArr.length; i++) {
+        if (myArr[i] > max) {
+            max = myArr[i];
+        }
+    }   
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i] == max) {
+            document.write("Giá trị thứ " + i + " kết quả: " + max);
+        }
+    }
+</script>
+
+</html>

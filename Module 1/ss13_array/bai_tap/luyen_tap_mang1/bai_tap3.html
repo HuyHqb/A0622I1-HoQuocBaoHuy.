@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let myArr = [33,42,65,98,15,35];
+    let max = myArr[0];
+    let avr = 0;
+
+    for (let i = 1; i < myArr.length; i++) {
+        if (myArr[i] > max) {
+            max = myArr[i];
+        }
+    }
+    for (let i=0;i<myArr.length;i++){
+        avr+=myArr[i]
+    }
+     document.write('số lớn nhất trong chuỗi là' + max + "<br>" + "giá trị trung bình của mảng là: " + avr/myArr.length)
+    
+    
+</script>
+
+</html>
