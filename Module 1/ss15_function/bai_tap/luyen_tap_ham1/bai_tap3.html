@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+</body>
+<script>
+    let a = parseInt(prompt('nhập số thứ 1 '));
+    let b = parseInt(prompt('nhập số thứ 2 '));
+    let callFunc = callArguments(a,b);
+
+    
+    function callArguments(numb1,numb2) {
+       if(numb1 > numb2){
+        alert('số thứ nhất '+ numb1+ "lớn hơn số thứ 2 : " + numb2);
+       } else document.getElementById('result').innerHTML = 'tổng 2 số: ' + Number(numb1 + numb2);
+    }
+</script>
+
+</html>

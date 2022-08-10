@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+   let arrA = ['c', 's', 'c', '2', '6', '1'];
+   document.write("Mảng ban đầu: " + arrA.toString() + "<br>");
+
+   for (let i = 0, j = arrA.length - 1; i < j; i++, j--) {
+      let temp = arrA[i];
+      arrA[i] = arrA[j];
+      arrA[j] = temp;
+   }
+   document.write('mảng sau khi đảo: '+arrA)
+
+</script>
+
+</html>

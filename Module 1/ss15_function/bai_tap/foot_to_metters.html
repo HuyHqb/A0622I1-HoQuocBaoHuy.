@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="numb">
+    <button type="button" onclick="footToMeter();">footToMeter</button>
+    <button type="button" onclick="meterToFoot();">meterToFoot</button><br>
+    <p id="result">result</p>
+</body>
+<script>
+    let n = document.getElementById('numb');
+
+    function footToMeter() {
+        let foot = parseFloat(n.value * 0.305);
+        document.getElementById('result').innerHTML = n.value + ' feet' + ' = ' + foot + ' meters';
+    }
+
+    function meterToFoot() {
+        let meter = parseFloat(n.value * 3.279);
+        document.getElementById('result').innerHTML = n.value + ' meters ' + ' = ' + foot + ' feet';
+    }
+</script>
+
+</html>
