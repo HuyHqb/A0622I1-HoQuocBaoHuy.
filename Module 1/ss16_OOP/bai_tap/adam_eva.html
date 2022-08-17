@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Aple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        loseWeight(aple){
+            this.weight-=1;
+        }
+    }
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        say() {
+            console.log('Táo ngon')
+        }
+        eatAple(aple) {
+            aple.loseWeight();
+            this.weight += 1;
+        }
+    }
+
+    let adam = new Human('Adam', 'male', 70);
+    let eva = new Human('Eva', 'female', 50);
+    let aple1 = new Aple(10)
+
+    adam.eatAple(aple1)
+    eva.eatAple(aple1)
+    console.log(adam.weight)
+    console.log(eva.weight)
+    console.log('khối lượng còn lại của quả táo là ' + aple1.weight+ ' đơn vị')
+
+</script>
+
+</html>

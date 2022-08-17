@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <canvas id="myCanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        perimeter(width, height) {
+            return (width + height) * 2
+        }
+        area(width, height) {
+            return width * height
+        }
+    }
+
+    let h = prompt('nhập chiều dài: ');
+    let w = prompt('nhập chiều rộng: ');
+    let rectangle = new Rectangle(h, w);
+    let canvas = document.getElementById("myCanvas");
+    if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'red';
+        ctx.fillRect(30, 40, w, h);
+    }
+    console.log('diện tích HCN là ' + rectangle.area(w, h));
+    console.log('chu vi HCN là ' + rectangle.perimeter(w, h));
+
+</script>
+
+</html>
