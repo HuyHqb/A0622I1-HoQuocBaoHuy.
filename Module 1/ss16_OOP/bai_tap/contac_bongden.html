@@ -13,12 +13,41 @@
 </body>
 <script>
     class ElectricLamp {
-        constructor(on, off) {
-            this.on = on
-            this.off = off
+        constructor(status) {
+            this.status = status
+        }
+
+        turnOn() {
+            console.log('on')
+        }
+        turnOff() {
+            console.log('off')
         }
     }
-    
+    class SwitchButton {
+        constructor(status,lamp){
+            this.status= status
+            this.lamp = lamp
+        }
+        connectToLamp(ElectricLamp){
+            this.lamp = ElectricLamp
+        }
+        switchOn(){
+            this.lamp.turnOn()
+        }
+        switchOff(){
+            this.lamp.turnOff()
+        }
+    }
+
+    let a = new ElectricLamp();
+    let b = new SwitchButton();
+    b.connectToLamp(a)
+    for (i=1;i<=10;i++){
+        console.log('lần thứ '+ i);
+        b.switchOn();
+        b.switchOff();
+    }
 </script>
 
 </html>

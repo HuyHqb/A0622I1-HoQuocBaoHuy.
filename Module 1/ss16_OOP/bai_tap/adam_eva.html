@@ -16,8 +16,8 @@
         constructor(weight) {
             this.weight = weight;
         }
-        loseWeight(aple){
-            this.weight-=1;
+        loseWeight(aple) {
+            this.weight -= 1;
         }
     }
     class Human {
@@ -30,8 +30,10 @@
             console.log('Táo ngon')
         }
         eatAple(aple) {
-            aple.loseWeight();
-            this.weight += 1;
+            if (app.weight > 0) {
+                aple.loseWeight();
+                this.weight += 1;
+            }
         }
     }
 
@@ -43,7 +45,7 @@
     eva.eatAple(aple1)
     console.log(adam.weight)
     console.log(eva.weight)
-    console.log('khối lượng còn lại của quả táo là ' + aple1.weight+ ' đơn vị')
+    console.log('khối lượng còn lại của quả táo là ' + aple1.weight + ' đơn vị')
 
 </script>
 

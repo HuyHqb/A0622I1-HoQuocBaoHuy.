@@ -10,19 +10,16 @@
 <body>
     <div>
         <label for="newProduct">Add new product</label>
-        <div id="add_product_area">
-            <div class="add_product">
-                <input type="text" id="newProduct" placeholder="New Product" />
-            </div>
-            <div class="add_product">
-                <button type="button" onclick="addProduct();">Add</button>
-            </div>
+        <div class="add_product">
+            <input type="text" id="newProduct" placeholder="New Product" />
+        </div>
+        <div class="add_product">
+            <button type="button" onclick="addProduct();">Add</button>
         </div>
     </div>
 
     <div class="display_product">
         <span>Display all products</span>
-
         <div>
             <table id="display_product">
                 <tr>
@@ -34,7 +31,51 @@
         </div>
     </div>
 
-    <script src="Manage.js"></script>
+    <script>
+        let products = [];
+        let length = 0;
+        let display = document.getElementById("display_product");
+
+        function addProduct() {
+            let product = document.getElementById("newProduct").value;
+            if (product !== "") {
+                products.push(product);
+                length++;
+                displayProduct();
+                document.getElementById("newProduct").value = "";
+            }
+        }
+
+        function removeProduct(id) {
+
+        }
+
+        function editName(id) {
+            id.innerText = prompt("Enter new name");
+        }
+        // hiển thị product
+        function displayProduct() {
+            let newProduct = products[length - 1];
+            //thêm hàng
+            let newPro = display.insertRow();
+            //thêm cột
+            let name = newPro.insertCell();
+            let editButton = newPro.insertCell();
+            let deleteButton = newPro.insertCell();
+
+            if (length == 1) {
+                document.getElementById("numProduct").innerText = length + " product";
+            } else document.getElementById("numProduct").innerText = length + " products";
+
+            newPro.id = "product" + length;
+            name.id = "namePro" + length;
+            name.innerHTML = newProduct;
+            editButton.innerHTML =
+                '<button onclick="editName(' + name.id + ');">Edit</button>';
+            deleteButton.innerHTML =
+                '<button onclick="removeProduct(' + newPro.id + ');">Delete</button>';
+        }
+    </script>
 </body>
 
 </html>
