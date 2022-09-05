@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a = prompt('nhập số bạn muốn in ra chữ: ');
+    let arr = a.split('');
+    console.log(arr)
+
+    for (i = 0; i < arr.length; i++) {
+        switch (arr[i]) {
+            case '0' : document.write('Không ')
+                break;
+            case '1' : document.write('một ')
+                break;
+            case '2': document.write('hai ')
+                break;
+            case '3': document.write('ba ')
+                break;
+            case '4': document.write('bốn ')
+                break;
+            case '5': document.write('năm ')
+                break;
+            case '6': document.write('sáu ')
+                break;
+            case '7': document.write('bảy ')
+                break;
+            case '8': document.write('tám ')
+                break;
+            case '9': document.write('chín ')
+                break;
+        }
+    }
+</script>
+
+</html>

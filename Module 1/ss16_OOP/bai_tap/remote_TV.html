@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        class Remote {
+            constructor(tv) {
+                this.tv = tv
+            }
+            connectToTv(Television) {
+                this.tv = Television
+            }
+            switchOn() {
+                this.tv.turnOn()
+            }
+            switchOff() {
+                this.tv.turnOff()
+            }
+            changeChannel() {
+                if (this.tv.status === "on") {
+                    let cnl = Number(prompt('nhập kênh bạn muốn chuyển đến : '));
+                    this.tv.channel = cnl;
+                    console.log('bạn vừa chuyển đến kênh ' + this.tv.channel);
+                } else {
+                    console.log('Tv đang tắt ')
+                }
+            }
+            volumeUp() {
+                let vol = Number(prompt('nhập volume bạn muốn tăng '));
+                this.tv.volume += vol
+            }
+            volumeDown() {
+                let vol = Number(prompt('nhập volume bạn muốn giảm '));
+                this.tv.volume -= vol
+            }
+        }
+
+
+
+        class Television {
+            constructor(volume, channel, status) {
+                this.volume = volume;
+                this.channel = channel;
+                this.status = status;
+            }
+            turnOn() {
+                this.status === "on"
+                console.log("TV đang mở")
+            }
+            turnOff() {
+                this.status === "off"
+                console.log("TV đang tắt")
+            }
+            nowShowing() {
+                console.log('Bạn đang xem kênh: ' + this.channel);
+            }
+            showVolume() {
+                console.log('Tv đang có âm lượng là: ' + this.volume);
+            }
+            viewStatus() {
+                if (this.status === "on") {
+                    console.log('Tv đang mở')
+                } else {
+                    console.log('Tv đang tắt')
+                }
+            }
+        }
+
+        let tv1 = new Television(20, 5, "on");
+        let rmt = new Remote();
+
+
+        rmt.connectToTv(tv1);
+        tv1.viewStatus();
+        rmt.switchOff();
+        
+        // tv1.nowShowing();
+        // rmt.changeChannel();
+        // tv1.nowShowing();
+
+
+        // tv1.showVolume();
+        // rmt.volumeUp();
+        // tv1.showVolume();
+        // rmt.volumeDown();
+        // tv1.showVolume();
+
+
+
+
+    </script>
+</body>
+
+</html>

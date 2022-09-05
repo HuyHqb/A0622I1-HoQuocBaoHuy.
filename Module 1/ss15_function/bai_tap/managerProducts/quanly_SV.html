@@ -12,7 +12,7 @@
     <input type="text" id="name" placeholder="Nhập tên">
     <input type="date" id="birthday" placeholder="Nhập ngày sinh">
     <input type="number" id="point" placeholder="Nhập point">
-    <button value="Save" onclick="addNewStudent()" >Add New Student</button>
+    <button value="Save" onclick="addNewStudent()">Add New Student</button>
     <p id="result"></p>
     <script>
         // tạo class sinh vien : id,name,birthday, point
@@ -72,13 +72,13 @@
                 '    </tr>';
             for (let i = 0; i < list.length; i++) {
                 tableString += '<tr>\n' +
-                    '        <td style="text-align: center;"  >' + (i + 1) + '</td>\n' +
-                    '        <td style="text-align: center;" >' + list[i].getId() + '</td>\n' +
-                    '        <td style="text-align: center;" >' + list[i].getName() + '</td>\n' +
+                    '        <td>' + (i + 1) + '</td>\n' +
+                    '        <td>' + list[i].getId() + '</td>\n' +
+                    '        <td>' + list[i].getName() + '</td>\n' +
                     '        <td>' + list[i].getBirthday() + '</td>\n' +
-                    '        <td style="text-align: center;" >' + list[i].getPoint() + '</td>\n' +
-                    '        <td ><button type="button" onclick="editStudent(' + i + ')" value="Edit">Edit</button>\n' +
-                    '        <td ><button type="button" onclick="deleteStudent(' + i + ')" value="Delete">Delete</button>\n' +
+                    '        <td>' + list[i].getPoint() + '</td>\n' +
+                    '        <td><button type="button" onclick="editStudent(' + i + ')" value="Edit">Edit</button>\n' +
+                    '        <td><button type="button" onclick="deleteStudent(' + i + ')" value="Delete">Delete</button>\n' +
                     '    </tr>'
             }
             tableString += '</table>'

@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+tr:nth-child(odd):not(:first-child) {
+    border: none;
+    background-color: #dce0dc67;
+}
+
+td:nth-child(1),th {
+    width: 200px;
+    padding: 7px 10px;
+}
+
+button {
+    display: inline-block;
+    background-color: #82a584;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+}
+
+input{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let sentence = prompt('nhập 1 chuỗi');
+    let count = 0;
+    let flag = false;
+
+    function countSpace(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] == ' ') {
+                count++;
+            }
+        } console.log(count)
+    }
+
+    function signStr(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] == ' ') {
+                flag = true;
+            }
+        }
+    }
+
+    countSpace(sentence);
+
+
+
+
+
+</script>
+
+</html>

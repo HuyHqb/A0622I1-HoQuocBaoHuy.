@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+   
+    let n = Number(prompt('nhập số lượng phần tử bạn muốn thêm vào'));
+    
+    while(n>50){
+        alert('vui lòng nhập số nhỏ hơn 50')
+        n = prompt('nhập số lượng phần tử bạn muốn thêm vào')
+    }
+    
+    let arrA = [];
+    let arrB =[];
+    let sum=0;
+    let count=0;
+    for (let i = 0; i <= n - 1;) {
+        let x = parseInt(prompt('nhập phần tử thứ ' + i + ' của mảng '));
+        arrA.push(x);
+        i++;
+    }
+    document.write('mảng A có các số: ' + arrA + '<br>')
+
+    for(let i = 0 ;i<arrA.length;i++){
+        if(arrA[i]%3==0){
+            sum+=arrA[i];
+            arrB.push(arrA[i]);
+            count++;
+        }
+    }
+    document.write('các số chia hết cho 3 có trong mảng là : ' + arrB + '<br>')
+    document.write('trung bình cộng của các số chia hết cho 3 có trong mảng là: ' + sum/count);
+    
+
+
+
+
+</script>
+
+</html>

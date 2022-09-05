@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let n = prompt('nhập số lượng phần tử bạn muốn in')
+    let arrA = [];
+    for (let i = 0; i <= n - 1;) {
+        let x = parseInt(prompt('nhập phần tử thứ ' + i + ' của mảng '));
+        if (x > 10 && x < 100) {
+            arrA.push(x);
+            i++;
+        } else {
+            alert('vui lòng nhập số lớn hơn 10 và nhỏ hơn 100')
+        }
+    }
+    console.log(arrA)
+
+    //hàm tách hàng chục và đơn vị
+    function checkNumber(x, arr) {
+        let hangDonVi = (x % 10);
+        let hangChuc = parseInt(x / 10);
+        if (hangDonVi > hangChuc) {
+            arr.push(x)
+        }
+    }
+
+    
+    let arr1 = [];
+    for (let i = 0; i < n; i++) {
+        checkNumber(arrA[i], arr1);
+    }
+    console.log(arr1)
+</script>
+
+</html>

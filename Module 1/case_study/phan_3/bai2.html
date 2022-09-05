@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+
+
+
+    // //in mảng 1
+    // let n = prompt('nhập số lượng phần tử bạn muốn in trong mảng A')
+    // let arrA = [];
+    // for (let i = 0; i <= n - 1; i++) {
+    //     let x = Number(prompt('nhập phần tử thứ ' + i + ' của mảng '));
+    //     arrA.push(x);
+    // }
+    // //in mảng 2
+    // let m = prompt('nhập số lượng phần tử bạn muốn in trong mảng B')
+    // let arrB = [];
+    // for (let i = 0; i <= m - 1; i++) {
+    //     let y = Number(prompt('nhập phần tử thứ ' + i + ' của mảng '));
+    //     arrB.push(y);
+    // }
+    // console.log('các phần tử trong arr1: ' + arrA);
+    // console.log('các phần tử trong arr2: ' + arrB);
+    // //nối 2 mảng
+    // let combineArr = arrA.concat(arrB)
+    // console.log('mảng sau khi nối: ' + combineArr);
+
+    let arrA = [7, 2, 5, 4, 6, 3, 5, 3]
+    let arrB = [7, 2, 5, 3, 5, 3]
+    let arrC = [];
+    let flag=false;
+
+
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrB.length; j++) {
+            if (arrA[i] === arrB[j]) {
+                flag =false;
+                break;
+            } else flag=true;
+        }
+        if (flag==true){
+            arrC.push(arrA[i])
+        }
+    }
+    
+console.log(arrC)
+</script>
+
+</html>

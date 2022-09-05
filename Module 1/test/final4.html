@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <title>Title</title>
+</head>
+
+<body>
+    <input type="text" id="stt" placeholder="Nhập STT">
+    <input type="text" id="fullName" placeholder="Nhập họ và tên">
+    <input type="date" id="birth" placeholder="Nhập ngày sinh">
+    <input type="text" id="address" placeholder="nhập địa chỉ">
+    <input type="number" id="salary" placeholder="Nhập lương">
+    <input type="text" id="position" placeholder="Nhập chúc vụ">
+    <button value="Save" onclick="add_new_emp()">thêm công nhân</button>
+    <p id="result"></p>
+    <script>
+
+        //tạo class so tiet kiem
+        class Employee {
+            constructor(stt, fullName, birth, address, salary, position) {
+                this.stt = stt;
+                this.fullName = fullName;
+                this.birth = birth;
+                this.address = address;
+                this.salary = salary;
+                this.position = position;
+            }
+            setStt(stt) {
+                this.stt = stt;
+            }
+            setFullName(fullName) {
+                this.fullName = fullName;
+            }
+            setBirth(birth) {
+                this.birth = birth;
+            }
+            setAddress(address) {
+                this.address = address;
+            }
+            setSalary(salary) {
+                this.salary = salary;
+            }
+            setPosition(position) {
+                this.position = position;
+            }
+            getStt() {
+                return this.stt;
+            }
+            getFullName() {
+                return this.fullName;
+            }
+            getBirth() {
+                return this.birth;
+            }
+            getAddress() {
+                return this.address;
+            }
+            getSalary() {
+                return this.salary;
+            }
+            getPosition() {
+                return this.position;
+            }
+        }
+
+
+        // thêm 3 công nhân
+        let listEmp = [];
+        let emp1 = new Employee(1, ' A', "12-12-1998", 'Quảng Nam', 201332, 'quản lý');
+        let emp2 = new Employee(2, ' B', "12-12-1998", 'Đà Nẵng', 23425, 'NV');
+        let emp3 = new Employee(3, ' A', "12-12-1998", 'Huế', 24232, 'Nv');
+        listEmp.push(emp1);
+        listEmp.push(emp2);
+        listEmp.push(emp3);
+        display(listEmp);
+
+
+
+        //hàm hiển thị
+        function display(list) {
+            let tableString = '<table>\n' +
+                '    <tr>\n' +
+                '        <th>STT</th>\n' +
+                '        <th>Họ Và Tên</th>\n' +
+                '        <th>Ngày Sinh</th>\n' +
+                '        <th>Địa Chỉ</th>\n' +
+                '        <th>Lương</th>\n' +
+                '        <th>Chức Vụ</th>\n' +
+                '        <th></th>\n' +
+                '    </tr>';
+            for (let i = 0; i < list.length; i++) {
+                tableString += '<tr>\n' +
+                    '        <td>' + list[i].getStt() + '</td>\n' +
+                    '        <td>' + list[i].getFullName() + '</td>\n' +
+                    '        <td>' + list[i].getBirth() + '</td>\n' +
+                    '        <td>' + list[i].getAddress() + '</td>\n' +
+                    '        <td>' + list[i].getSalary() +' VND' + '</td>\n' +
+                    '        <td>' + list[i].getPosition() + '</td>\n' +
+                    '    </tr>'
+            }
+            tableString += '</table>'
+            document.getElementById('result').innerHTML = tableString;
+        }
+
+
+
+
+        function add_new_emp() {
+            let stt = document.getElementById("stt").value;
+            let fullName = document.getElementById("fullName").value;
+            let birth = document.getElementById("birth").value;
+            let address = document.getElementById("address").value;
+            let salary = document.getElementById("salary").value;
+            let position = document.getElementById("position").value;
+            let newEmployee = new Employee(stt, fullName, birth, address, salary, position);
+            listEmp.push(newEmployee);
+            display(listEmp);
+            document.getElementById("stt").value = "";
+            document.getElementById("fullName").value = "";
+            document.getElementById("birth").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("salary").value = 0;
+            document.getElementById("position").value = "";
+
+        }
+    </script>
+</body>
+
+</html>
